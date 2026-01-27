@@ -1,0 +1,19 @@
+using UnityEngine;
+
+namespace Solution
+{
+
+    public class OOPEnemy : Character
+    {
+        public void Start()
+        {
+            GetRemainEnergy();
+        }
+
+        public void Attack(OOPPlayer _player)
+        {
+            _player.energy -= AttackPoint;
+            Debug.Log("player is energy " + _player.energy);
+        }
+    }
+}
