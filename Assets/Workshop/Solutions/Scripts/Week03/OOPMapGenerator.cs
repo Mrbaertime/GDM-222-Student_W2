@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 namespace Solution
@@ -123,17 +124,31 @@ namespace Solution
             return mapdata[(int)x, (int)y];
         }
 
-        public GameObject PlaceObject(int x, int y,GameObject identity,Transform parrent)
+        public GameObject PlaceObject(int x, int y, GameObject identity, Transform parrent)
         {
-            
+
             GameObject obj = Instantiate(identity, new Vector3(x, y, 0), Quaternion.identity);
             obj.transform.parent = parrent;
             Identity _identity = obj.GetComponent<Identity>();
             _identity.mapGenerator = this;
+            _identity.positionX = x;
+            _identity.positionY = y;
             mapdata[x, y] = _identity;
             return obj;
         }
 
-      
+        public void UpdatePositionIdenity(Identity identity, int toX, int toY)
+        {
+            mapdata[identity.positionX, identity.positionY] = null;
+            int newX = Mathf.Clamp( toX, 0, Rows);
+            int newY = Mathf.Clamp( toY, 0, Cols);
+            Debug.Log(newX+":"+ newY);
+            mapdata[newX, newY] = identity;
+            identity.positionX = newX;
+            identity.positionY = newY;
+            identity.transform.position = new Vector3(newX, newY, 0);
+        }
+
+
     }
 }
