@@ -1,9 +1,14 @@
 using UnityEngine;
 
-namespace Assignment02.StudentSolution
+namespace Assignment03.StudentSolution
 {
-    public class Enemy
+    public class Enemy : Entity
     {
+        public int damage;
+        protected int aiLevel;
+
+        public virtual void Attack(Entity target) { }
+        protected virtual void Patrol() { }
 
     }
 }
