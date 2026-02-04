@@ -9,7 +9,7 @@ using UnityEngine.TestTools;
 
 namespace Assignment03
 {
-    public class Assignment_Testcase
+    public class Assignment_Testcase2
     {
         private IAssignment assignment;
 
@@ -20,7 +20,7 @@ namespace Assignment03
             AssignmentDebugConsole.Clear();
 
             // Use FinalSolution as the test subject
-            assignment = new StudentSolution();
+            assignment = new StudentSolution2();
         }
 
         [TearDown]
@@ -504,7 +504,7 @@ namespace Assignment03
         #endregion
     }
 
-    public class TestUtils
+    public class TestUtils1
     {
         internal static void AssertMultilineEqual(string expected, string actual, string message = null)
         {

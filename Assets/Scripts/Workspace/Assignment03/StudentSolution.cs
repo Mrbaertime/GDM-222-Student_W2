@@ -8,7 +8,7 @@ using Debug = AssignmentSystem.Services.AssignmentDebugConsole;
 
 namespace Assignment03
 {
-    public class StudentSolution : MonoBehaviour, IAssignment
+    public class StudentSolution2 : MonoBehaviour, IAssignment
     {
         #region Lecture
 
@@ -68,7 +68,44 @@ namespace Assignment03
         }
         public void LCT02_SyntaxHashTable()
         {
-            throw new System.NotImplementedException();
+            Hashtable hashtable = new Hashtable();
+            //Key Value
+            hashtable.Add(1, "Apple");
+            hashtable.Add(2, "Banana");
+            hashtable.Add("bad-fruit", "Rotten Tomato");
+
+            string fruit1 = (string)hashtable[1];
+            string fruit2 = (string)hashtable[2];
+            string badFruit = (string)hashtable["bad-fruit"];
+
+            Debug.Log($"fruit1: {fruit1}");
+            Debug.Log($"fruit1: {fruit2}"); // ในรูปพิมพ์ fruit1 ซ้ำนะครับ
+            Debug.Log($"fruit1: {badFruit}");
+
+            LCT02_PrintHashTable(hashtable);
+
+            int key = 2;
+            if (hashtable.ContainsKey(key))
+            {
+                Debug.Log($"found {key}");
+            }
+            else
+            {
+                Debug.Log($" not found {key}");
+            }
+
+            int keyToRemove = 1;
+            hashtable.Remove(keyToRemove);
+            LCT02_PrintHashTable(hashtable);
+        }
+
+        public void LCT02_PrintHashTable(Hashtable hashtable)
+        {
+            Debug.Log("table .....");
+            foreach(DictionaryEntry entry in hashtable)
+            {
+                Debug.Log($" Key {entry.Key} ,Velue {entry.Value}");
+            }
         }
 
         public void LCT03_SyntaxDictionary()

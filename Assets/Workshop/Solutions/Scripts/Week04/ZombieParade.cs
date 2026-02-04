@@ -21,7 +21,7 @@ namespace Solution
             moveDirection = Vector3.up;
             // เริ่ม Coroutine สำหรับการเคลื่อนที่
             positionX = (int)transform.position.x;
-            positionY = (int)transform.position.y;
+            positionX = (int)transform.position.y;
             StartCoroutine(MoveParade());
         }
         private Vector3 RandomizeDirection()
@@ -40,52 +40,9 @@ namespace Solution
         IEnumerator MoveParade()
         {      
             //0. สร้างหัวงู
-            Parade.AddFirst(this.gameObject);
             while (isAlive)
             {
-                LinkedListNode<GameObject> firstNode = Parade.First;
-                GameObject firstPart = firstNode.Value;
-
-                LinkedListNode<GameObject> LastNode = Parade.Last;
-                GameObject LastPart = firstNode.Value;
-
-                Parade.RemoveLast();
-
-                int toX = 0;
-                int toY = 0;
-
-                bool isCollide = true;
-                int countTryFind = 0;
-
-                while (isCollide == true || countTryFind > 10)
-                {
-                    moveDirection = RandomizeDirection();
-                    toX = (int)(firstPart.transform.position.x + moveDirection.x);
-                    toY = (int)(firstPart.transform.position.y + moveDirection.y);
-                    countTryFind++;
-                    if (countTryFind > 10)
-                    {
-                        toX = positionX;
-                        toY = positionY;
-                    }
-                    isCollide = IsCollision(toX,toY);
-                }
-
-                positionX = toX;
-                positionY = toY;
-
-                LastPart.transform.position = new Vector3(positionX, positionY, 0);
-
-                Parade.AddFirst(LastNode);
-
-                if(Parade.Count < SizeParade)
-                {
-                    timer++;
-                    if(timer > 3){
-                        Grow();
-                        timer = 0;
-                    }
-                }
+                
                 yield return new WaitForSeconds(moveInterval);
             }
         }
@@ -102,13 +59,7 @@ namespace Solution
         // ฟังก์ชันสำหรับเพิ่มส่วนของงู (Grow)
         private void Grow()
         {
-            GameObject newPart = Instantiate(bodyPrefab[0]);
-
-            GameObject LastPart = Parade.Last.Value;
-
-            newPart.transform.position = LastPart.transform.position;   
-
-            Parade.AddLast(newPart);
+           
         }
 
     }
