@@ -99,6 +99,7 @@
     "com.unity.burst": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version": "1.8.26",
 =======
       "version": "1.8.27",
@@ -106,6 +107,9 @@
 =======
       "version": "1.8.25",
 >>>>>>> parent of ed3beff (work in class)
+=======
+      "version": "1.8.26",
+>>>>>>> parent of c30ddb5 (homework)
       "depth": 2,
       "source": "registry",
       "dependencies": {
@@ -167,6 +171,7 @@
     "com.unity.ide.visualstudio": {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       "version": "2.0.25",
       "depth": 0,
       "source": "registry",
@@ -186,6 +191,13 @@
       "dependencies": {
         "com.unity.test-framework": "1.1.9"
 >>>>>>> parent of ed3beff (work in class)
+=======
+      "version": "2.0.25",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.test-framework": "1.1.31"
+>>>>>>> parent of c30ddb5 (homework)
       },
       "url": "https://packages.unity.com"
     },
@@ -315,7 +327,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.timeline": {
-      "version": "1.8.10",
+      "version": "1.8.9",
       "depth": 0,
       "source": "registry",
       "dependencies": {

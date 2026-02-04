@@ -1,12 +1,9 @@
 using UnityEngine;
 
-namespace Assignment03.StudentSolution
+namespace Assignment02.StudentSolution
 {
-    public class Mage : RangeEnemy
+    public class Mage
     {
-        public int mana;
 
-        public override void Attack(Entity target) { }
-        public void CastSpell(Entity target) { }
     }
 }

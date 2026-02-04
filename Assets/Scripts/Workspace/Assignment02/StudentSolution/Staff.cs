@@ -1,12 +1,9 @@
 using UnityEngine;
 
-namespace Assignment03.StudentSolution
+namespace Assignment02.StudentSolution
 {
-    public class Staff : Weapon
+    public class Staff
     {
-        public int magicPower;
-        public void CastSpell() { }
-        public override void Equip(Player player) { }
-        public override void DealDamage(Entity target) { }
+
     }
 }
