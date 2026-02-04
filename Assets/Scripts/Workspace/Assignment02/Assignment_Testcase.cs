@@ -3,18 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using Assignment02.StudentSolution;
+using Assignment03.StudentSolution;
 using AssignmentSystem.Services;
 using NUnit.Framework;
 using UnityEngine;
 using UnityEngine.TestTools;
-using LCT01 = Assignment02.StudentSolution.LCT01;
-using LCT02 = Assignment02.StudentSolution.LCT02;
-using LCT03 = Assignment02.StudentSolution.LCT03;
-using LCT04 = Assignment02.StudentSolution.LCT04;
-using LCT05 = Assignment02.StudentSolution.LCT05;
+using LCT01 = Assignment03.StudentSolution.LCT01;
+using LCT02 = Assignment03.StudentSolution.LCT02;
+using LCT03 = Assignment03.StudentSolution.LCT03;
+using LCT04 = Assignment03.StudentSolution.LCT04;
+using LCT05 = Assignment03.StudentSolution.LCT05;
 
-namespace Assignment02
+namespace Assignment03
 {
     public class Assignment_Testcase
     {

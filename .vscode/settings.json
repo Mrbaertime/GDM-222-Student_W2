@@ -65,6 +65,12 @@
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
         "*.sln": "*.csproj",
+<<<<<<< HEAD
     },
     "dotnet.defaultSolution": "GDM-222-Student.sln"
+=======
+        "*.slnx": "*.csproj"
+    },
+    "dotnet.defaultSolution": "GDM-222-Student.slnx"
+>>>>>>> c30ddb5079366190c59e2dc5527c64c7e971a10c
 }

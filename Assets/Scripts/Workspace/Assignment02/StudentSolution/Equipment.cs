@@ -1,9 +1,12 @@
 using UnityEngine;
 
-namespace Assignment02.StudentSolution
+namespace Assignment03.StudentSolution
 {
-    public class Equipment
+    public class Equipment : Item
     {
+        public virtual void Equip(Player player)
+        {
 
+        }
     }
 }
